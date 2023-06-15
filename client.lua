@@ -1,7 +1,7 @@
 local screenW, screenH = guiGetScreenSize()
 local px, py = screenW / 1366, screenH / 768
 
-local font = dxCreateFont("f/Regular.ttf", 14 * px)
+local font = dxCreateFont("Regular.ttf", 14 * px)
 
 local playerMoney = 0
 local playerName = ""
@@ -22,10 +22,10 @@ function drawHUD()
     updatePlayerInfo()
 
     -- Draw avatar
-    dxDrawImage(1240 * px, 10 * px, 125 * px, 125 * px, "i/avatar_default.png")
+    dxDrawImage(1240 * px, 10 * px, 125 * px, 125 * px, "i/avatar.png")
 
     -- Draw health bar
-    dxDrawImage(1065 * px, 50 * px, 175 * px, 20 * px, "i/bar-health.png", 0, 0, 0, tocolor(255, 255, 255, 200))
+    dxDrawImage(1065 * px, 50 * px, 175 * px, 20 * px, "i/health.png", 0, 0, 0, tocolor(255, 255, 255, 200))
 
     -- Draw money text shadow
     dxDrawText(playerMoney .. ",00$", 1065.5 * px, 81 * px, 75 * px, 75 * px, tocolor(0, 0, 0, 200), 0.81, font, "left", "top", false, false, false, false, false)
